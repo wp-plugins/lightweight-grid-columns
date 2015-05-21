@@ -67,7 +67,7 @@ Take note of our last column - see the last="true" part? Don't forget ;)
 
 This is taken directly from (http://unsemantic.com):
 
-There are grid classes named grid-x where "x" is a number that represents the percentage width of each grid unit. These cover multiples of 5, up to 100 (grid-5, grid-10 … grid-95, grid-100). There are also classes for dividing a page into thirds: grid-33 and grid-66 which are 33.3333% and 66.6667% wide, respectively. 
+There are grid classes named grid-x where "x" is a number that represents the percentage width of each grid unit. These cover multiples of 5, up to 100 (grid-5, grid-10 ... grid-95, grid-100). There are also classes for dividing a page into thirds: grid-33 and grid-66 which are 33.3333% and 66.6667% wide, respectively. 
 
 = Are there any other options I can use in the shortcode? =
 
