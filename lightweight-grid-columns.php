@@ -3,7 +3,7 @@
 Plugin Name: Lightweight Grid Columns
 Plugin URI: http://generatepress.com
 Description: Add lightweight grid columns to your content using easy to use shortcodes.
-Version: 0.1
+Version: 0.2
 Author: Thomas Usborne
 Author URI: http://edge22.com
 License: GNU General Public License v2 or later
@@ -134,16 +134,21 @@ function lgc_columns_shortcode( $atts , $content = null ) {
 	$clear = ( 'true' == $last ) ? '<div class="lgc-clear"></div>' : '';
 	$inlineCSS = ( ! empty( $style ) ) ? ' style="' . esc_attr( $style ) . '"' : '';
 	return lgc_columns_helper( '<div class="lgc-column lgc-grid-parent lgc-grid-' . intval( $grid ) . ' lgc-tablet-grid-' . intval( $tablet_grid ) . ' lgc-mobile-grid-' . intval( $mobile_grid ) . '"><div class="inside-grid-column ' . esc_attr( $class ) . '"' . $inlineCSS . '>' . $content . '</div></div>' . $clear );
+
 }
 endif;
 
 if ( ! function_exists( 'lgc_columns_helper' ) ) :
-function lgc_columns_helper( $content ) {
-		
-	$content = preg_replace( '#^<\/p>|^<br \/>|<p>$#', '', $content );
-	$content = preg_replace( '#<br \/>#', '', $content );
-	//$content = preg_replace( '#<p>|</p>#', '', $content );
-		
-	return do_shortcode( shortcode_unautop( force_balance_tags( trim( $content ) ) ) );
+function lgc_columns_helper( $content ){   
+    
+	$array = array (
+        '<p>[' => '[', 
+        ']</p>' => ']', 
+        ']<br />' => ']'
+    );
+
+    $content = strtr( $content, $array );
+    return do_shortcode( shortcode_unautop( force_balance_tags( trim( $content ) ) ) );
+	
 }
 endif;

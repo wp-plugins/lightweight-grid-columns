@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: columns, columns shortcode, grid columns
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,10 +91,16 @@ You can use:
 
 == Changelog ==
 
+= 0.2 =
+* Allow line breaks inside columns
+
 = 0.1 =
 * Initial release
 
 == Upgrade Notice ==
+
+= 0.2 =
+Allow line breaks inside your columns
 
 = 0.1 =
 * Initial release

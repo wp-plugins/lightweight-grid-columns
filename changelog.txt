@@ -10,5 +10,10 @@ Changelog Legend:
 
 ----
 
+(5/21/2015) - 0.2
+[*] Allow line breaks inside columns
+
+----
+
 (5/15/2015) - 0.1
 Initial Release
