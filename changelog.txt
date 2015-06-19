@@ -10,6 +10,12 @@ Changelog Legend:
 
 ----
 
+(6/19/2015) - 0.3
+[!] Fix bug where TinyMCE icon wasn't showing up if SiteOrigin Page Builder and Black Studio TinyMCE Widget were activated together
+[+] Add IE 7 & 8 compatibility
+
+----
+
 (5/21/2015) - 0.2
 [*] Allow line breaks inside columns
 

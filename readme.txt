@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: columns, columns shortcode, grid columns
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 0.2
+Stable tag: 0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,10 @@ You can use:
 
 == Changelog ==
 
+= 0.3 =
+* Fix bug where TinyMCE icon wasn't showing up if SiteOrigin Page Builder and Black Studio TinyMCE Widget were activated together
+* Add IE 7 & 8 compatibility
+
 = 0.2 =
 * Allow line breaks inside columns
 
@@ -98,6 +102,9 @@ You can use:
 * Initial release
 
 == Upgrade Notice ==
+
+= 0.3 =
+Add old IE compatibility
 
 = 0.2 =
 Allow line breaks inside your columns

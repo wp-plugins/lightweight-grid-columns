@@ -3,7 +3,7 @@
 Plugin Name: Lightweight Grid Columns
 Plugin URI: http://generatepress.com
 Description: Add lightweight grid columns to your content using easy to use shortcodes.
-Version: 0.2
+Version: 0.3
 Author: Thomas Usborne
 Author URI: http://edge22.com
 License: GNU General Public License v2 or later
@@ -35,7 +35,7 @@ if ( ! function_exists( 'lgc_add_shortcode_button' ) ) :
 /*
  * Set it up so we can register our TinyMCE button
  */
-add_action('admin_head', 'lgc_add_shortcode_button');
+add_action('admin_init', 'lgc_add_shortcode_button');
 function lgc_add_shortcode_button() {
 
 	global $typenow;
@@ -150,5 +150,21 @@ function lgc_columns_helper( $content ){
     $content = strtr( $content, $array );
     return do_shortcode( shortcode_unautop( force_balance_tags( trim( $content ) ) ) );
 	
+}
+endif;
+
+if ( ! function_exists( 'lgc_ie_compatibility' ) ) :
+/** 
+ * Add compatibility for IE8 and lower
+ * @since 0.3
+ */
+add_action('wp_head','lgc_ie_compatibility');
+function lgc_ie_compatibility()
+{
+?>
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="<?php echo plugins_url('/css/ie.min.css', __FILE__); ?>" />
+	<![endif]-->
+<?php
 }
 endif;
